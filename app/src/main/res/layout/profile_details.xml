@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.kmorawski.sampleapp.list.ProfileViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:showIn="@layout/activity_profile_details"
+        tools:background="@android:color/black">
+
+        <ImageView
+            android:id="@+id/full_screen_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/image_transition"
+            tools:context=".views.ProfileDetailsActivity" />
+
+        <!-- semi-transparent background that will ensure that the captions are well visible
+             even if the profile picture doesn't provide enough contrast in the area.
+             background colour set in runtime (Palette). -->
+        <View
+            android:id="@+id/captions_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.33"
+            android:layout_alignTop="@+id/margin"
+            android:layout_alignParentBottom="true"/>
+
+        <Space
+            android:id="@+id/margin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/captions_padding"
+            android:layout_above="@+id/txt_name"/>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_above="@+id/age"
+            android:text="@{model.name}"
+            android:textStyle="bold"
+            tools:text="lazyduck408"
+            android:transitionName="@string/name_transition"
+            style="@style/ProfileDetailsCaption" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_above="@+id/location"
+            android:text="@{model.age}"
+            android:transitionName="@string/age_transition"
+            tools:text="25 years"
+            style="@style/ProfileDetailsCaption"/>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_marginBottom="@dimen/captions_padding"
+            android:layout_alignParentBottom="true"
+            android:text="@{model.region}"
+            tools:text="maasdriel, zeeland"
+            style="@style/ProfileDetailsCaption"/>
+
+    </RelativeLayout>
+</layout>

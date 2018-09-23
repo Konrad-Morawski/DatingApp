@@ -1,0 +1,33 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- for better visual effect of the SlidingUpPanel -->
+        <item name="android:windowActionBarOverlay">true</item>
+
+        <!-- for better visual effect of the Material transition -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/no_transition</item>
+        <item name="android:windowExitTransition">@android:transition/no_transition</item>
+    </style>
+
+    <style name="ProfileCaption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginStart">@dimen/captions_padding</item>
+        <item name="android:textColor">@color/defaultTextColor</item>
+    </style>
+
+    <style name="ProfileDetailsCaption" parent="ProfileCaption">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    </style>
+
+    <style name="ProfileItemCaption" parent="ProfileCaption">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+    </style>
+
+</resources>

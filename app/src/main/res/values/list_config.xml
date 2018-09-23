@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="column_span">2</integer>
+    <integer name="max_items">500</integer>
+    <integer name="page_size">10</integer>
+</resources>

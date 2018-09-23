@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- identifiers for Material transitions
+         (occurring between the list screen and the details screen) -->
+    <string name="image_transition" translatable="false">ImageTransition</string>
+    <string name="name_transition" translatable="false">NameTransition</string>
+    <string name="age_transition" translatable="false">AgeTransition</string>
+</resources>

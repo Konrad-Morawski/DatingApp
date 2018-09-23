@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Soulmate</string>
+    <string name="years">%1$d years</string>
+    <string name="you_are_offline">Oops! You are offline</string>
+    <string name="network_error">Network error: %1$s</string>
+    <string name="scroll_further_to_retry">Scroll further to retry…</string>
+</resources>

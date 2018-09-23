@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.kmorawski.sampleapp.list.ProfileViewModel" />
+        <variable
+            name="profileSelectedListener"
+            type="com.kmorawski.sampleapp.list.OnProfileSelectedListener"/>
+    </data>
+
+    <!-- I know about ConstraintLayout, but for such simple views I go oldschool. -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:padding="1dp"
+        android:onClick="@{(view) -> profileSelectedListener.onSelected(view, model)}">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:transitionName="@string/image_transition"
+            app:imageUrl="@{model.imageUrl}"/>
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_alignBottom="@id/profile_image"
+            android:layout_marginBottom="8dp"
+            android:transitionName="@string/age_transition"
+            android:text="@{model.age}"
+            tools:text="25 years"
+            style="@style/ProfileItemCaption" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_above="@+id/age"
+            android:transitionName="@string/name_transition"
+            android:text="@{model.name}"
+            tools:text="lazyduck408"
+            style="@style/ProfileItemCaption"/>
+
+    </RelativeLayout>
+</layout>

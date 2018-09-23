@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- how many milliseconds should take gradual darkening of background underneath text captions
+     on the profile details screen? allows for a smooth visual transition.
+     the longer the value, the gentler the effect -->
+    <integer name="highlight_captions_background_speed_ms">1000</integer>
+
+    <!-- how fast is the location caption supposed to fade in.
+         it's the one present on the details screen, but absent on the list.
+         showing it gradually creates a more fluid impression -->
+    <integer name="location_fade_in_speed_ms">250</integer>
+</resources>

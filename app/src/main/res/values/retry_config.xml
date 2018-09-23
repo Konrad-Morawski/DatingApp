@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- how long should be the delay after the user overscrolls in order to retry on an error?
+         can't be long, but immediate reaction feels unpleasant -->
+    <integer name="retry_delay_ms">500</integer>
+    <!-- what's the minimum size of an overscroll required to trigger a retry attempt
+         on a network error? arbitrary, just helps to ignore very delicate overscrolls -->
+    <integer name="minimum_overscroll_size">48</integer>
+</resources>
